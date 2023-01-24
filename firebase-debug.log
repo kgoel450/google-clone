@@ -1,0 +1,78 @@
+[debug] [2023-01-24T10:30:23.180Z] ----------------------------------------------------------------------
+[debug] [2023-01-24T10:30:23.183Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kriti\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-24T10:30:23.183Z] CLI Version:   11.21.0
+[debug] [2023-01-24T10:30:23.183Z] Platform:      win32
+[debug] [2023-01-24T10:30:23.184Z] Node Version:  v19.1.0
+[debug] [2023-01-24T10:30:23.184Z] Time:          Tue Jan 24 2023 16:00:23 GMT+0530 (India Standard Time)
+[debug] [2023-01-24T10:30:23.184Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-24T10:30:23.272Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-24T10:30:23.273Z] > authorizing via signed-in user (kritikagoel450@gmail.com)
+[debug] [2023-01-24T10:30:23.273Z] [iam] checking project clone-96adf for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-24T10:30:23.276Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-96adf:testIamPermissions [none]
+[debug] [2023-01-24T10:30:23.276Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-96adf:testIamPermissions x-goog-quota-user=projects/clone-96adf
+[debug] [2023-01-24T10:30:23.276Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-96adf:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-24T10:30:25.959Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-96adf:testIamPermissions 200
+[debug] [2023-01-24T10:30:25.960Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-96adf:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-24T10:30:25.961Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-96adf [none]
+[debug] [2023-01-24T10:30:26.557Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-96adf 200
+[debug] [2023-01-24T10:30:26.557Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-96adf {"projectId":"clone-96adf","projectNumber":"3784886126","displayName":"googleclone","name":"projects/clone-96adf","resources":{"hostingSite":"clone-96adf"},"state":"ACTIVE","etag":"1_e5a39d83-321e-4bd3-930e-9c18589135c4"}
+[info] 
+[info] === Deploying to 'clone-96adf'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-01-24T10:30:26.568Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions [none]
+[debug] [2023-01-24T10:30:26.569Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-24T10:30:28.586Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions 200
+[debug] [2023-01-24T10:30:28.586Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions {"name":"projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[clone-96adf]: beginning deploy... 
+[info] i  hosting[clone-96adf]: found 2 files in build 
+[debug] [2023-01-24T10:30:47.771Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-24T10:30:47.783Z] [hosting] hash cache [YnVpbGQ] stored for 2 files
+[debug] [2023-01-24T10:30:47.783Z] [hosting][hash queue][FINAL] {"max":6,"min":5,"avg":5.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":8}
+[debug] [2023-01-24T10:30:47.784Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31:populateFiles [none]
+[debug] [2023-01-24T10:30:47.784Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/index.html":"0adee6aa08febf4106f6c40359d25b27aa045c961075049b27c134f0be43c5ed"}}
+[debug] [2023-01-24T10:30:49.072Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31:populateFiles 200
+[debug] [2023-01-24T10:30:49.073Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31:populateFiles {"uploadRequiredHashes":["daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/clone-96adf/versions/dec900f9f3950a31/files"}
+[debug] [2023-01-24T10:30:49.073Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-96adf/versions/dec900f9f3950a31/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [none]
+[debug] [2023-01-24T10:30:49.073Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-96adf/versions/dec900f9f3950a31/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [stream]
+[debug] [2023-01-24T10:30:49.075Z] [hosting][populate queue][FINAL] {"max":1292,"min":1292,"avg":1292,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1294}
+[debug] [2023-01-24T10:30:49.076Z] [hosting] uploads queued: 1
+[debug] [2023-01-24T10:30:50.680Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-96adf/versions/dec900f9f3950a31/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa 200
+[debug] [2023-01-24T10:30:50.680Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/clone-96adf/versions/dec900f9f3950a31/files/daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa [stream]
+[debug] [2023-01-24T10:30:50.681Z] [hosting][upload queue][FINAL] {"max":1607,"min":1607,"avg":1607,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1608}
+[info] +  hosting[clone-96adf]: file upload complete 
+[debug] [2023-01-24T10:30:50.682Z] [hosting] deploy completed after 2917ms
+[debug] [2023-01-24T10:30:50.684Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "clone-96adf"
+    },
+    "version": "projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31"
+  }
+]
+[info] i  hosting[clone-96adf]: finalizing version... 
+[debug] [2023-01-24T10:30:50.687Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions/dec900f9f3950a31 updateMask=status%2Cconfig
+[debug] [2023-01-24T10:30:50.687Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions/dec900f9f3950a31 {"status":"FINALIZED","config":{}}
+[debug] [2023-01-24T10:30:51.762Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions/dec900f9f3950a31 200
+[debug] [2023-01-24T10:30:51.762Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/versions/dec900f9f3950a31 {"name":"projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-24T10:30:26.134101Z","createUser":{"email":"kritikagoel450@gmail.com"},"finalizeTime":"2023-01-24T10:30:49.758082Z","finalizeUser":{"email":"kritikagoel450@gmail.com"}}
+[debug] [2023-01-24T10:30:51.762Z] [hosting] finalized version for clone-96adf:[object Object]
+[info] +  hosting[clone-96adf]: version finalized 
+[info] i  hosting[clone-96adf]: releasing new version... 
+[debug] [2023-01-24T10:30:51.764Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/channels/live/releases versionName=projects%2F3784886126%2Fsites%2Fclone-96adf%2Fversions%2Fdec900f9f3950a31
+[debug] [2023-01-24T10:30:51.764Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/channels/live/releases {}
+[debug] [2023-01-24T10:30:52.810Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/channels/live/releases 200
+[debug] [2023-01-24T10:30:52.810Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/clone-96adf/channels/live/releases {"name":"projects/3784886126/sites/clone-96adf/channels/live/releases/1674556250044585","version":{"name":"projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-24T10:30:26.134101Z","createUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"},"finalizeTime":"2023-01-24T10:30:49.758082Z","finalizeUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"}},"type":"DEPLOY","releaseTime":"2023-01-24T10:30:50.044585280Z","releaseUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"}}
+[debug] [2023-01-24T10:30:52.810Z] [hosting] release: {"name":"projects/3784886126/sites/clone-96adf/channels/live/releases/1674556250044585","version":{"name":"projects/3784886126/sites/clone-96adf/versions/dec900f9f3950a31","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-24T10:30:26.134101Z","createUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"},"finalizeTime":"2023-01-24T10:30:49.758082Z","finalizeUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"}},"type":"DEPLOY","releaseTime":"2023-01-24T10:30:50.044585280Z","releaseUser":{"email":"kritikagoel450@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp4JqmdKZXm_bE815YELGbgQpdAq0TrgwA5VkTWx=mo"}}
+[info] +  hosting[clone-96adf]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/clone-96adf/overview
+[info] Hosting URL: https://clone-96adf.web.app
